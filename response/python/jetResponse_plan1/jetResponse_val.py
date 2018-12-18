@@ -111,28 +111,6 @@ for i_eta_th, eta_th in enumerate( eta_thresholds ):
     resp_pt[eta_th].style = styles.lineStyle(eta_color[eta_th] )
     resp_pt[eta_th].legendText = "%2.1f #leq #eta < %2.1f"%eta_th
 
-#resp_eta_HEP17 = ROOT.TProfile("resp_eta_HEP17", "resp_eta_HEP17", 26, -5.2, 5.2 )
-#resp_eta_HEP17.style = styles.lineStyle( ROOT.kRed )
-#resp_eta_HEP17.legendText = "%3.2f #leq #phi #leq %3.2f"%( phi_low, phi_high)
-
-#NHEF_HEP17 = ROOT.TH1D("NHEF_HEP17", "NHEF_HEP17", 20, 0, 1 )
-#NHEF_HEP17.style = styles.lineStyle( ROOT.kRed )
-#NHEF_HEP17.legendText = "%3.2f #leq #phi #leq %3.2f"%( phi_low, phi_high)
-#NHEF_nonHEP17 = ROOT.TH1D("NHEF_HEP17", "NHEF_HEP17", 20, 0, 1 )
-#NHEF_nonHEP17.style = styles.lineStyle( ROOT.kBlue )
-#NHEF_nonHEP17.legendText = "!(%3.2f #leq #phi #leq %3.2f)"%( phi_low, phi_high)
-
-#resp_eta_nonHEP17 = ROOT.TProfile("resp_eta_nonHEP17", "resp_eta_nonHEP17", 26, -5.2, 5.2 )
-#resp_eta_nonHEP17.style = styles.lineStyle( ROOT.kBlue )
-#resp_eta_nonHEP17.legendText = "!(%3.2f #leq #phi #leq %3.2f)"%( phi_low, phi_high)
-    
-#resp_pt = ROOT.TProfile("response_pt", "response_pt", len(thresholds)-1, array.array('d', thresholds) )
-#resp_pt.style = styles.lineStyle( ROOT.kRed )
-#resp_pt.legendText = "HEP171717"
-#resp_pt_ref = ROOT.TProfile("response_pt_ref", "response_pt_ref", len(thresholds)-1, array.array('d', thresholds) )
-#resp_pt_ref.style = styles.lineStyle( ROOT.kBlack )
-#resp_pt_ref.legendText = "other"
-
 ## This is how you define the products which should be read. Structure is {'name1':{'type':'<type1>', 'label':(<label1>)}, etc.}
 products = {
     'jets':      {'type': 'vector<reco::PFJet>', 'label':"ak4PFJetsCHS"},
